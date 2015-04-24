@@ -7,6 +7,8 @@
 <c:url value="/js/angular.min.js" var="angular" />
 <c:url value="/js/cordova.js" var="cordova" />
 
+
+
 <link rel="stylesheet" type="text/css" href="${cssjquerymobile}" />
 <script type="text/javascript" src="${jquery}"></script>
 <script type="text/javascript" src="${jquerymobile}"></script>
