@@ -15,20 +15,13 @@
 
 <%@ include file="/WEB-INF/common.jspf" %>
 
-<link rel="stylesheet" href="/TourWeb/bootstrap-3.3.4/css/bootstrap.min.css"/>
-<script type="text/javascript" src="/TourWeb/http://maps.google.com/maps/api/js"></script>
-<!-- <script type="text/javascript" src="/TourWeb/jquery/jquery-2.1.3.min.js"></script> -->
-<script type="text/javascript" src="/TourWeb/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/TourWeb/angular-1.3.15/angular.min.js"></script>
-<script type="text/javascript" src="/TourWeb/angular-1.3.15/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="/TourWeb/angular-1.3.15/ng-map.min.js"></script>
 
 <script type="text/javascript">
 	var myApp = angular.module('myApp', []);
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
 			
-	};
+	});
 </script>
 
 <title>asjdlfjsalf</title>
