@@ -15,10 +15,6 @@
 
 <%@ include file="/WEB-INF/common.jspf" %>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e7e55a43f6a6368457ab6d7b9e75eff72b1b5d06
 <script type="text/javascript">
 	var myApp = angular.module('myApp', []);
 	myApp.controller('mainController', function($scope) {
