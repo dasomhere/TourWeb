@@ -39,15 +39,15 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="http://localhost:8080/TourWeb/m/tour/form">행사</a></li>
-					<li><a href="http://localhost:8080/TourWeb/m/tour/form" >지역</a></li>
-					<li><a href="/TourWeb/navbar/weather.jsp" >날씨</a></li>
+					<li><a href="/TourWeb/navbar/local.jsp" >지역</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/form" >날씨</a></li>
 					<li><a href="/TourWeb/navbar/load.jsp" >길찾기</a></li>
 				</ul>
 			</div>
 		</header>
 				
 		<section data-role="content" class="container">
-			<h1>local</h1>
+			<h1>weather</h1>
 		</section>
 		<footer data-role="footer">
 			<h1>Footer</h1>
