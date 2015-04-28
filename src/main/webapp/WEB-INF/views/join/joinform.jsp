@@ -20,6 +20,26 @@
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
 	});
+	
+	function idCheck() {
+		var id = document.getElementById("id").value;
+	    var queryString = "command=idcheck&id="+id;
+	    if(id.length<6){
+	        document.getElementById("idcheckLayer").innerHTML = "<font color=red>6자리 이상 입력하세요.</font>";     
+	    }else{
+	        // 1. XMLHttpReqeust 객체 생성
+	        createXhr();
+	        // 2. 이벤트 핸들러 등록
+	        xhr.onreadystatechange = callback;  // callback 함수를 등록
+	        // 3. open()를 통해 요청관련 설정을 설정
+	        xhr.open("POST", "/javascript_ajax_class/AjaxServlet", true);
+	        // 4. Header에 contentType 지정 - post
+	        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	        // 5. send()를 통해 요청
+	        xhr.send(queryString);  // 요청 쿼리를 보내준다.
+	    }
+	    alert("idcheck()...");
+	};
 </script>
 <style type="text/css">
 	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
@@ -58,7 +78,13 @@
 						<tr>
 							<td align="right">아이디 :&nbsp;</td>
 							<td><input type="text" name="id"/></td>
-							<td style="padding-left: 10px"><button style="width: 80px; height: 40px; font-size: 13px;">중복확인</button></td>
+							<td style="padding-left: 10px">
+								<input type="button" value="중복확인" onclick="idCheck()" style="width: 80px; height: 40px; font-size: 13px;"/>
+<!-- 								<button style="width: 80px; height: 40px; font-size: 13px;">중복확인</button> -->
+							</td>
+						</tr>
+						<tr>
+							<span id = "idcheckLayer"></span>
 						</tr>
 						<tr>
 							<td align="right">비밀번호 :&nbsp;</td>

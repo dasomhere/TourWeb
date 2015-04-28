@@ -56,14 +56,6 @@ public class JoinController {
 		}
 		
 		return "join/success";
-//		if("webapp".equals(user.getId()) && "1234".equals(user.getPassword())) {
-//			session.setAttribute("user", user);
-//			return "login/success";
-//			// Login success
-//		} else {
-//			return "redirect:login";
-//			// Login fail
-//		}
 	}
 }
 
