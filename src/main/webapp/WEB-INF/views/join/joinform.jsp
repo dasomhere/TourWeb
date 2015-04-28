@@ -19,27 +19,27 @@
 	var myApp = angular.module('myApp', []);
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
-	});
 	
-	function idCheck() {
-		var id = document.getElementById("id").value;
-	    var queryString = "command=idcheck&id="+id;
-	    if(id.length<6){
-	        document.getElementById("idcheckLayer").innerHTML = "<font color=red>6자리 이상 입력하세요.</font>";     
-	    }else{
-	        // 1. XMLHttpReqeust 객체 생성
-	        createXhr();
-	        // 2. 이벤트 핸들러 등록
-	        xhr.onreadystatechange = callback;  // callback 함수를 등록
-	        // 3. open()를 통해 요청관련 설정을 설정
-	        xhr.open("POST", "/javascript_ajax_class/AjaxServlet", true);
-	        // 4. Header에 contentType 지정 - post
-	        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	        // 5. send()를 통해 요청
-	        xhr.send(queryString);  // 요청 쿼리를 보내준다.
-	    }
-	    alert("idcheck()...");
-	};
+		$scope.idCheck = function() {
+		    var id=$("#id").val();//입력된 아이디
+		    $.ajax({
+			    url:"/TourWeb/idcheck.jsp",
+			    data:"id="+id, //서버로 전송될 파라미터
+			    type:"post", //post 방식으로 요청합니다.
+			    dataType:"xml",//응답콘텐츠 타입
+			    success:function(data){//응답이 성공하면 function 수행
+			    //응답데이터에서 result 태그의 텍스트값 얻어오기
+				    var using=$(data).find("result").text();
+				    if(using=='true'){
+					    //span에 결과 출력하기
+					    $("#idcheck").html("<font color='red'>사용중인 아이디 입니다.</font>");
+					}else{
+					    $("#idcheck").html("<font color='green'>사용가능한 아이디 입니다.</font>");
+					}
+				}
+		    });
+		};
+	});
 </script>
 
 <title>joinform.jsp</title>
@@ -64,20 +64,17 @@
 				<form action="join" method="post">
 					<table>
 						<tr>
-							<td align="right">이름 :&nbsp;</td>
+							<td align="right" style="width: 70px;"/>이름 :&nbsp;</td>
 							<td><input type="text" name="name"/></td>
 						</tr>
 						<tr>
 							<td align="right">아이디 :&nbsp;</td>
-							<td><input type="text" name="id"/></td>
+							<td><input type="text" name="id" id="id"/></td>
 							<td style="padding-left: 10px">
-								<input type="button" value="중복확인" onclick="idCheck()" style="width: 80px; height: 40px; font-size: 13px;"/>
-<!-- 								<button style="width: 80px; height: 40px; font-size: 13px;">중복확인</button> -->
+								<input type="button" value="중복확인" data-ng-click="idCheck()" style="width: 70px; height: 30px; font-size: 13px;"/>
 							</td>
 						</tr>
-						<tr>
-							<span id = "idcheckLayer"></span>
-						</tr>
+						<tr><td></td><td colspan="2"><span id="idcheck"></span></td></tr>
 						<tr>
 							<td align="right">비밀번호 :&nbsp;</td>
 							<td><input type="password" name="password"/></td>
