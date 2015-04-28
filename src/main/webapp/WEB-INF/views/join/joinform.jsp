@@ -20,12 +20,6 @@
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
 	});
-	
-	$(function () {
-		   $('#modal').modal(toggle)
-		});
-
-
 </script>
 <style type="text/css">
 	.font{
@@ -33,7 +27,7 @@
 		color: blue;
 	}
 </style>
-<title>asjdlfjsalf</title>
+<title>joinform.jsp</title>
 </head>
 	
 <body data-ng-controller="mainController">
@@ -43,23 +37,44 @@
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
 
-	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: center;">로그인</button>
-	
-	   			
+	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">로그인</button>
   			</div>
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#" class="ui-btn-active">행사</a></li>
-					<li><a href="http://localhost:8080/TourWeb/m/tour/local" >지역</a></li>
-					<li><a href="http://localhost:8080/TourWeb/m/tour/weather" >날씨</a></li>
-					<li><a href="http://localhost:8080/TourWeb/m/tour/load" >길찾기</a></li>
-				</ul>
-			</div>
 		</header>
 				
 		<section data-role="content" class="container">
-			<h1>event</h1>
+			<h3>회원가입</h3>
+			기본정보를 모두 입력해 주세요.
+			<hr>
+			<div>
+				<form action="join" method="post">
+					<table>
+						<tr>
+							<td align="right">이름 :&nbsp;</td>
+							<td><input type="text" name="name"/></td>
+							<td style="padding-left: 10px"><button style="width: 80px; height: 40px; font-size: 13px;">중복확인</button></td>
+						</tr>
+						<tr>
+							<td align="right">아이디 :&nbsp;</td>
+							<td><input type="text" name="id"/></td>
+						</tr>
+						<tr>
+							<td align="right">비밀번호 :&nbsp;</td>
+							<td><input type="password" name="password"/></td>
+						</tr>
+						<tr>
+							<td align="right">이메일 :&nbsp;</td>
+							<td><input type="email" name="email"/></td>
+						</tr>
+	
+					</table>
+					<hr>
+					<div align="center">
+						<input class="btn btn-info btn-lg" data-toggle="modal" type="submit" value="회원가입" />
+					</div>
+				</form>
+			</div>
 		</section>
+		
 		<footer data-role="footer">
 			<h1>Footer</h1>
 		</footer>
@@ -76,8 +91,8 @@
 	          <h4 class="modal-title">로그인</h4>
 	        </div>
 	        <div class="modal-body">
-
-			<form class="form-horizontal" role="form" action="" method="post">
+	        
+			<form class="form-horizontal" role="form">
 			     <div class="form-group">
 			      <label class="control-label col-sm-2" for="id">아이디</label>
 			      <div class="col-sm-10">          
@@ -91,15 +106,15 @@
 			      </div>
 			    </div>
 			    <div class="form-group">        
-			      <div class="col-sm-offset-10 col-sm-10">
-			        <button type="button" class="btn btn-default">로그인</button>
+			      <div class="col-sm-offset-2 col-sm-10">
+			        <button type="button" class="btn btn-default" >로그인</button>
 			      </div>
 			    </div>
 			  </form>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" >아이디/비밀번호 찾기</button>
-	          <a href="http://localhost:8080/TourWeb/m/tour/join">회원가입</a>
+	          <button type="button" class="btn btn-default" >회원가입</button>
 	        </div>
 	      </div>
 	      
