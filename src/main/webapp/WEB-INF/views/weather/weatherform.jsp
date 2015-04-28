@@ -25,18 +25,7 @@
 
 <title>weatherform.jsp</title>
 
-<style type="text/css">
 
- 	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
- 	@font-family {
- 		font-family : 'Nanum Gothic', serif;
- 	}
- 	* {
- 		font-family : 'Nanum Gothic';
- 	}
-	
-	
-</style>
 
 </head>
 
@@ -47,13 +36,10 @@
 		<header data-role="header"  data-position="fixed" >
 		 	<div data-role="header" style="height: 50px">
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
-<<<<<<< HEAD
+
 				<h1 class="font">떠 나 yo!</h1>
 	   			<a href="http://localhost:8080/TourWeb/m/tour/login">로그인</a>
-=======
-				<h1>떠 나 yo!</h1>
-	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">로그인</button>
->>>>>>> 88f6a122ce13ea762307417eb64bd132f8ac89f9
+
   			</div>
 			<div data-role="navbar">
 				<ul>
