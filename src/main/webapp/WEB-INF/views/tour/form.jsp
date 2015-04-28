@@ -70,8 +70,8 @@
 	          <h4 class="modal-title">로그인</h4>
 	        </div>
 	        <div class="modal-body">
-	        
-			<form class="form-horizontal" role="form">
+
+			<form class="form-horizontal" role="form" action="" method="post">
 			     <div class="form-group">
 			      <label class="control-label col-sm-2" for="id">아이디</label>
 			      <div class="col-sm-10">          

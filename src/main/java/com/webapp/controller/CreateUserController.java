@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/tour")
-public class LoginController {
+public class CreateUserController {
 		static Log log = LogFactory.getLog(TourController.class);
-	@RequestMapping(value="/login", method=RequestMethod.POST)
+	@RequestMapping(value="/local", method=RequestMethod.GET)
 	public String tour(){
 		log.info("###############");
-		log.info("login");
+		log.info("asdfdsf");
 		log.info("###############");
 		
-		return "login/loginsuccess";
+		return "local/localform";
 	}
 }
 
