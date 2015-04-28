@@ -33,8 +33,13 @@
 		<header data-role="header"  data-position="fixed" >
 		 	<div data-role="header" style="height: 50px">
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
+<<<<<<< HEAD
 				<h1 class="font">떠 나 yo!</h1>
 	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">로그인</button>
+=======
+				<h1>떠 나 yo!</h1>
+	   			<a href="#" >검색</a>
+>>>>>>> d7500f3836ee8963dd6157a86da9db5976b654f9
   			</div>
 			<div data-role="navbar">
 				<ul>
