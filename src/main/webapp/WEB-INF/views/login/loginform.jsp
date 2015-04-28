@@ -20,8 +20,16 @@
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
 	});
+	
+	$(function () {
+		   $('#modal').modal(toggle)
+		});
+
+
 </script>
-<title>joinform.jsp</title>
+<style type="text/css">
+</style>
+<title>asjdlfjsalf</title>
 </head>
 	
 <body data-ng-controller="mainController">
@@ -31,18 +39,28 @@
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
 
-	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">로그인</button>
+	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: center;">로그인</button>
+	
+	   			
   			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" class="ui-btn-active">행사</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/local" >지역</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/weather" >날씨</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/load" >길찾기</a></li>
+				</ul>
+			</div>
 		</header>
 				
 		<section data-role="content" class="container">
-			<h3>회원가입 성공</h3>
+			<h1>event</h1>
 		</section>
-		
 		<footer data-role="footer">
 			<h1>Footer</h1>
 		</footer>
 	</div>
+	
 	
 	  <!-- Modal -->
 	  <div class="modal fade" id="myModal" role="dialog">
@@ -55,8 +73,8 @@
 	          <h4 class="modal-title">로그인</h4>
 	        </div>
 	        <div class="modal-body">
-	        
-			<form class="form-horizontal" role="form">
+
+			<form class="form-horizontal" role="form" action="" method="post">
 			     <div class="form-group">
 			      <label class="control-label col-sm-2" for="id">아이디</label>
 			      <div class="col-sm-10">          
@@ -70,15 +88,15 @@
 			      </div>
 			    </div>
 			    <div class="form-group">        
-			      <div class="col-sm-offset-2 col-sm-10">
-			        <button type="button" class="btn btn-default" >로그인</button>
+			      <div class="col-sm-offset-10 col-sm-10">
+			        <button type="button" class="btn btn-default">로그인</button>
 			      </div>
 			    </div>
 			  </form>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" >아이디/비밀번호 찾기</button>
-	          <button type="button" class="btn btn-default" >회원가입</button>
+	          <a href="http://localhost:8080/TourWeb/m/tour/join">회원가입</a>
 	        </div>
 	      </div>
 	      

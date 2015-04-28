@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+/*http://fonts.googleapis.com/earlyaccess/nanumgothic.css*/
+
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+ 	@FONT-FACE {
+ 		font-family : 'Indie Flower', serif;
+ 	}
+ 	* {
+ 		font-family : 'Indie Flower';
+ 	}
+	

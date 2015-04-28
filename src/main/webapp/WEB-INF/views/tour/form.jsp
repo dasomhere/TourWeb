@@ -21,23 +21,12 @@
 		$scope.title = "Main Controller";
 	});
 	
-	$(function() {
-		
-	
-	 $('.custom-close').on('click', function () {
-	        $('#myModal').modal('hide');
-	    });
-
+	$(function () {
+		   $('#modal').modal(toggle)
 	});
 
 </script>
-<style type="text/css">
-	.font{
-		font-size: 300;
-		color: blue;
-	}
-</style>
-<title>asjdlfjsalf</title>
+<title>form.jsp</title>
 </head>
 	
 <body data-ng-controller="mainController">
@@ -68,47 +57,6 @@
 			<h1>Footer</h1>
 		</footer>
 	</div>
-	
-	  <!-- Modal -->
-	  <div class="modal fade" id="myModal" role="dialog" aria-hidden="true">
-	    <div class="modal-dialog">
-	    
-	      <!-- Modal content-->
-	      <div class="modal-content">
-	        <div class="modal-header">
-	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	          <h4 class="modal-title">로그인</h4>
-	        </div>
-	        <div class="modal-body">
-
-			<form class="form-horizontal" role="form" action="" method="post">
-			     <div class="form-group">
-			      <label class="control-label col-sm-2" for="id">아이디</label>
-			      <div class="col-sm-10">          
-			        <input type="text" class="form-control" id="id" placeholder="아이디를 입력해주세요">
-			      </div>
-			    </div>
-			    <div class="form-group">
-			      <label class="control-label col-sm-2" for="pwd">비밀번호</label>
-			      <div class="col-sm-10">          
-			        <input type="password" class="form-control" id="pwd" placeholder="비밀번호를 입력해주세요">
-			      </div>
-			    </div>
-			    <div class="form-group">        
-			      <div class="col-sm-offset-10 col-sm-10">
-			        <button type="button" class="btn btn-default">로그인</button>
-			      </div>
-			    </div>
-			  </form>
-	        </div>
-	        <div class="modal-footer">
-	          <button type="button" class="btn btn-default" >아이디/비밀번호 찾기</button>
-	          <a class="custom-close"   href="http://localhost:8080/TourWeb/m/tour/join" >회원가입</a>
-	        </div>
-	      </div>
-	      
-	    </div>
-	  </div>
-		
+			
 </body>
 </html>

@@ -8,6 +8,7 @@
 <c:url value="/js/cordova.js" var="cordova" />
 <c:url value="/bootstrap-3.3.4/css/bootstrap.min.css" var="bootstrapcss"/>
 <c:url value="/bootstrap-3.3.4/js/bootstrap.min.js" var="bootstrapmin"/>
+<c:url value="/css/font.css" var="font"/>
 
 
 <!-- <script type="text/javascript" src="/TourWeb/http://maps.google.com/maps/api/js"></script> -->
@@ -19,6 +20,7 @@
 
 
 
+<link rel="stylesheet" type="text/css" href="${font}">
 <link rel="stylesheet" type="text/css" href="${cssjquerymobile}" />
 <link rel="stylesheet" type="text/css" href="${bootstrapcss}" />
 <script type="text/javascript" src="${jquery}"></script>
