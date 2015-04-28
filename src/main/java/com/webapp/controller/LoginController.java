@@ -15,7 +15,7 @@ import com.webapp.model.User;
 @RequestMapping("/tour")
 public class LoginController {
 		static Log log = LogFactory.getLog(TourController.class);
-	
+
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String tour(){
 			log.info("###############");

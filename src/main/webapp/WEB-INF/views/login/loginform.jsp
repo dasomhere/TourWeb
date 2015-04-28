@@ -20,6 +20,7 @@
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
 	});
+<<<<<<< HEAD
 	
 	$(function () {
 		   $('#modal').modal(toggle)
@@ -30,6 +31,16 @@
 <style type="text/css">
 </style>
 <title>asjdlfjsalf</title>
+=======
+</script>
+<style type="text/css">
+	.font{
+		font-size: 300;
+		color: blue;
+	}
+</style>
+<title>joinform.jsp</title>
+>>>>>>> a26b53e61d316038e57c48bd516b42145ac7e1f4
 </head>
 	
 <body data-ng-controller="mainController">
@@ -39,6 +50,7 @@
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
 
+<<<<<<< HEAD
 	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: center;">로그인</button>
 	
 	   			
@@ -103,5 +115,41 @@
 	    </div>
 	  </div>
 		
+=======
+  			</div>
+		</header>
+				
+		<section data-role="content" class="container">
+			<div>
+				<form action="/login" method="post">
+					<table>
+						<tr>
+							<td align="right"> &nbsp; &nbsp; &nbsp;아이디   &nbsp; &nbsp;</td>
+							<td><input type="text" name="id"/></td>
+						</tr>
+						<tr>
+							<td align="right">비밀번호  &nbsp;</td>
+							<td><input type="password" name="password"/></td>
+						</tr>
+					</table>
+					<br>
+					<div align="center">
+						<button type="button">로그인</button>
+						</div>
+						<hr>
+						<div align="center">
+						<button type="button">아이디/비밀번호 찾기</button>
+						<button type="button">회원가입</button>
+						
+						
+					</div>
+				</form>
+			</div>
+		</section>
+		
+	
+	</div>
+	
+>>>>>>> a26b53e61d316038e57c48bd516b42145ac7e1f4
 </body>
 </html>

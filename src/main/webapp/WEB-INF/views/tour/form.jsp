@@ -19,11 +19,17 @@
 	var myApp = angular.module('myApp', []);
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
-	});
+	});	
 	
 	$(function () {
 		   $('#modal').modal(toggle)
 	});
+	$('yourmodalselector').on('hide',function(e){
+		   if(yourConditionNotToCloseMet){
+		      e.preventDefault();
+		   }
+		   $(".btn-warning").click();
+		});
 
 </script>
 <title>form.jsp</title>
@@ -35,8 +41,8 @@
 		 	<div data-role="header" style="height: 50px">
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
-
-	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: center;">로그인</button>
+				<a href="http://localhost:8080/TourWeb/m/tour/login" data-rel="dialog" data-transition="slidedown" >로그인</a>
+<!-- 	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: center;">로그인</button> -->
 	
 	   			
   			</div>
@@ -57,6 +63,48 @@
 			<h1>Footer</h1>
 		</footer>
 	</div>
-			
+	
+	
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog" aria-hidden="true">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	          <h4 class="modal-title">로그인</h4>
+	        </div>
+	        <div class="modal-body">
+
+			<form class="form-horizontal" role="form" action="" method="post">
+			     <div class="form-group">
+			      <label class="control-label col-sm-2" for="id">아이디</label>
+			      <div class="col-sm-10">          
+			        <input type="text" class="form-control" id="id" placeholder="아이디를 입력해주세요">
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label class="control-label col-sm-2" for="pwd">비밀번호</label>
+			      <div class="col-sm-10">          
+			        <input type="password" class="form-control" id="pwd" placeholder="비밀번호를 입력해주세요">
+			      </div>
+			    </div>
+			    <div class="form-group">        
+			      <div class="col-sm-offset-10 col-sm-10">
+			        <button type="button" class="btn btn-default">로그인</button>
+			      </div>
+			    </div>
+			  </form>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" >아이디/비밀번호 찾기</button>
+	          <a type="button" class="btn btn-warning btn-lg shiny" aria-hidden="true" data-dismiss href="http://localhost:8080/TourWeb/m/tour/join" >회원가입</a>
+	        </div>
+	      </div>
+	      
+	    </div>
+	  </div>
+		
 </body>
 </html>
