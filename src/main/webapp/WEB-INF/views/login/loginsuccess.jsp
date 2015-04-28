@@ -23,7 +23,21 @@
 	});
 </script>
 
-<title>asjdlfjsalf</title>
+<title>loginsuccess.jsp</title>
+
+<style type="text/css">
+
+ 	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+ 	@font-family {
+ 		font-family : 'Nanum Gothic', serif;
+ 	}
+ 	* {
+ 		font-family : 'Nanum Gothic';
+ 	}
+	
+	
+</style>
+
 </head>
 
 
@@ -33,7 +47,7 @@
 		<header data-role="header"  data-position="fixed" >
 		 	<div data-role="header" style="height: 50px">
     			<a href="http://localhost:8080/TourWeb/m/tour/form" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
-				<h1 class="font">떠 나 yo!</h1>
+				<h1>떠 나 yo!</h1>
 	   			<a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">검색</a>
   			</div>
 			<div data-role="navbar">
