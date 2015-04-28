@@ -37,16 +37,16 @@
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
 
-	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">로그인</button>
+	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: center;">로그인</button>
 	
 	   			
   			</div>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#">행사</a></li>
-					<li><a href="/TourWeb/navbar/local.jsp" >지역</a></li>
-					<li><a href="/TourWeb/navbar/weather.jsp" >날씨</a></li>
-					<li><a href="/TourWeb/navbar/load.jsp" >길찾기</a></li>
+					<li><a href="#" class="ui-btn-active">행사</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/local" >지역</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/weather" >날씨</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/load" >길찾기</a></li>
 				</ul>
 			</div>
 		</header>
@@ -85,8 +85,8 @@
 			      </div>
 			    </div>
 			    <div class="form-group">        
-			      <div class="col-sm-offset-2 col-sm-10">
-			        <button type="button" class="btn btn-default" >로그인</button>
+			      <div class="col-sm-offset-10 col-sm-10">
+			        <button type="button" class="btn btn-default">로그인</button>
 			      </div>
 			    </div>
 			  </form>

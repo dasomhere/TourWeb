@@ -1,4 +1,4 @@
-package webapp.controller;
+package com.webapp.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

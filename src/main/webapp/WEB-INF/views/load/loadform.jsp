@@ -32,16 +32,16 @@
 	<div data-role="page">
 		<header data-role="header"  data-position="fixed" >
 		 	<div data-role="header" style="height: 50px">
-    			<a href="http://localhost:8080/TourWeb/m/tour/form" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+    			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
-	   			<a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">검색</a>
+	   			<a href="#" >검색</a>
   			</div>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="http://localhost:8080/TourWeb/m/tour/form">행사</a></li>
-					<li><a href="/TourWeb/navbar/local.jsp" >지역</a></li>
-					<li><a href="/TourWeb/navbar/weather.jsp" >날씨</a></li>
-					<li><a href="http://localhost:8080/TourWeb/m/tour/form" >길찾기</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/local" >지역</a></li>
+					<li><a href="http://localhost:8080/TourWeb/m/tour/weather" >날씨</a></li>
+					<li><a href="#" class="ui-btn-active" >길찾기</a></li>
 				</ul>
 			</div>
 		</header>
