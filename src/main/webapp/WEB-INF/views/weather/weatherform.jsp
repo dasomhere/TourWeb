@@ -38,7 +38,7 @@
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 
 				<h1 class="font">떠 나 yo!</h1>
-	   			<a href="http://localhost:8080/TourWeb/m/tour/login">로그인</a>
+	   			<a href="http://localhost:8080/TourWeb/m/tour/login" data-rel="dialog" data-transition="slidedown" >로그인</a>
 
   			</div>
 			<div data-role="navbar">

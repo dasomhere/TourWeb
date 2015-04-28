@@ -32,7 +32,7 @@
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
 
-	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">로그인</button>
+	   			
   			</div>
 		</header>
 				
@@ -64,7 +64,7 @@
 					</table>
 					<hr>
 					<div align="center">
-						<input class="btn btn-info btn-lg" data-toggle="modal" type="submit" value="회원가입" />
+						<input class="btn btn-info btn-lg"  type="submit" value="회원가입" />
 					</div>
 				</form>
 			</div>
