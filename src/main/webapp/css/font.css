@@ -1,11 +1,10 @@
 @CHARSET "UTF-8";
-/*http://fonts.googleapis.com/earlyaccess/nanumgothic.css*/
 
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
  	@FONT-FACE {
- 		font-family : 'Indie Flower', serif;
+ 		font-family : 'Jeju Gothic', serif;
  	}
  	* {
- 		font-family : 'Indie Flower';
+ 		font-family : 'Jeju Gothic';
  	}
-	
+		
