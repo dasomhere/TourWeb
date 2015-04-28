@@ -41,15 +41,7 @@
 	    alert("idcheck()...");
 	};
 </script>
-<style type="text/css">
-	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-	@font-face {
-    font-family: 'Nanum Gothic', serif;
-	}
-	body {
-	  font-family: 'Nanum Gothic';
-	}
-</style>
+
 <title>joinform.jsp</title>
 </head>
 	

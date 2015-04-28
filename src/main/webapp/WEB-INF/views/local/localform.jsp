@@ -24,22 +24,7 @@
 </script>
 
 <title>localform.jsp</title>
-
-<style type="text/css">
-
- 	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
- 	@font-family {
- 		font-family : 'Nanum Gothic', serif;
- 	}
- 	* {
- 		font-family : 'Nanum Gothic';
- 	}
-	
-	
-</style>
 </head>
-
-
 
 <body data-ng-controller="mainController">
 	<div data-role="page">
