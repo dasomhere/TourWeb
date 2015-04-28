@@ -1,5 +1,5 @@
 package com.webapp.model;
 
-public class CreateUser {
+public class Join {
 
 }

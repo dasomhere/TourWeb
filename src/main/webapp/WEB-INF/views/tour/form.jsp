@@ -20,6 +20,12 @@
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
 	});
+	
+	$(function () {
+		   $('#modal').modal(toggle)
+		});
+
+
 </script>
 <style type="text/css">
 	.font{
@@ -93,7 +99,7 @@
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" >아이디/비밀번호 찾기</button>
-	          <button type="button" class="btn btn-default" >회원가입</button>
+	          <a href="http://localhost:8080/TourWeb/m/tour/join">회원가입</a>
 	        </div>
 	      </div>
 	      
