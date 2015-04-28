@@ -22,7 +22,7 @@ public class LoginController {
 			log.info("login");
 			log.info("###############");
 			
-			return "tour/loginform";
+			return "login/loginform";
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
