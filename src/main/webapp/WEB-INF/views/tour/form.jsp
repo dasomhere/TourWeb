@@ -21,10 +21,14 @@
 		$scope.title = "Main Controller";
 	});
 	
-	$(function () {
-		   $('#modal').modal(toggle)
-		});
+	$(function() {
+		
+	
+	 $('.custom-close').on('click', function () {
+	        $('#myModal').modal('hide');
+	    });
 
+	});
 
 </script>
 <style type="text/css">
@@ -66,13 +70,13 @@
 	</div>
 	
 	  <!-- Modal -->
-	  <div class="modal fade" id="myModal" role="dialog">
+	  <div class="modal fade" id="myModal" role="dialog" aria-hidden="true">
 	    <div class="modal-dialog">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
 	        <div class="modal-header">
-	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 	          <h4 class="modal-title">로그인</h4>
 	        </div>
 	        <div class="modal-body">
@@ -99,7 +103,7 @@
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" >아이디/비밀번호 찾기</button>
-	          <a href="http://localhost:8080/TourWeb/m/tour/join">회원가입</a>
+	          <a class="custom-close"   href="http://localhost:8080/TourWeb/m/tour/join" >회원가입</a>
 	        </div>
 	      </div>
 	      
