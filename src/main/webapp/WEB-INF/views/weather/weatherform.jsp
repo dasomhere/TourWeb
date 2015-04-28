@@ -34,7 +34,7 @@
 		 	<div data-role="header" style="height: 50px">
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
-	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">로그인</button>
+	   			<a href="http://localhost:8080/TourWeb/m/tour/login">로그인</a>
   			</div>
 			<div data-role="navbar">
 				<ul>

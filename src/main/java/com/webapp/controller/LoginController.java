@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/tour")
 public class LoginController {
 		static Log log = LogFactory.getLog(TourController.class);
-	@RequestMapping(value="/login", method=RequestMethod.POST)
+	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String tour(){
 		log.info("###############");
 		log.info("login");
 		log.info("###############");
 		
-		return "login/loginsuccess";
+		return "login/loginform";
 	}
 }
 

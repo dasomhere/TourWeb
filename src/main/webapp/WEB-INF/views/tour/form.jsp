@@ -19,16 +19,14 @@
 	var myApp = angular.module('myApp', []);
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
-	});
+	});	
 	
-	$(function() {
-		
-	
-	 $('.custom-close').on('click', function () {
-	        $('#myModal').modal('hide');
-	    });
-
-	});
+	$('yourmodalselector').on('hide',function(e){
+		   if(yourConditionNotToCloseMet){
+		      e.preventDefault();
+		   }
+		   $(".btn-warning").click();
+		});
 
 </script>
 <style type="text/css">
@@ -46,8 +44,8 @@
 		 	<div data-role="header" style="height: 50px">
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
 				<h1 class="font">떠 나 yo!</h1>
-
-	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: center;">로그인</button>
+				<a href="http://localhost:8080/TourWeb/m/tour/login" data-rel="dialog" data-transition="slidedown" >로그인</a>
+<!-- 	   			<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-align: center;">로그인</button> -->
 	
 	   			
   			</div>
@@ -68,6 +66,7 @@
 			<h1>Footer</h1>
 		</footer>
 	</div>
+	
 	
 	  <!-- Modal -->
 	  <div class="modal fade" id="myModal" role="dialog" aria-hidden="true">
@@ -103,7 +102,7 @@
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" >아이디/비밀번호 찾기</button>
-	          <a class="custom-close"   href="http://localhost:8080/TourWeb/m/tour/join" >회원가입</a>
+	          <a type="button" class="btn btn-warning btn-lg shiny" aria-hidden="true" data-dismiss href="http://localhost:8080/TourWeb/m/tour/join" >회원가입</a>
 	        </div>
 	      </div>
 	      
