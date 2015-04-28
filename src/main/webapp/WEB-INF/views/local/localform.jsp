@@ -33,7 +33,7 @@
 		<header data-role="header"  data-position="fixed" >
 		 	<div data-role="header" style="height: 50px">
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
-				<h1 class="font">떠 나 yo!</h1>
+				<h1>떠 나 yo!</h1>
 	   			<a href="#" >검색</a>
   			</div>
 			<div data-role="navbar">
