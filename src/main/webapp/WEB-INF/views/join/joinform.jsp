@@ -64,7 +64,7 @@
 				<form action="join" method="post">
 					<table>
 						<tr>
-							<td align="right" style="width: 70px;"/>이름 :&nbsp;</td>
+							<td align="right" style="width: 70px;">이름 :&nbsp;</td>
 							<td><input type="text" name="name"/></td>
 						</tr>
 						<tr>
