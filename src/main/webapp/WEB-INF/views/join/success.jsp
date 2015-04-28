@@ -45,37 +45,7 @@
 		</header>
 				
 		<section data-role="content" class="container">
-			<h3>회원가입</h3>
-			기본정보를 모두 입력해 주세요.
-			<hr>
-			<div>
-				<form action="join" method="post">
-					<table>
-						<tr>
-							<td align="right">이름 :&nbsp;</td>
-							<td><input type="text" name="name"/></td>
-						</tr>
-						<tr>
-							<td align="right">아이디 :&nbsp;</td>
-							<td><input type="text" name="id"/></td>
-							<td style="padding-left: 10px"><button style="width: 80px; height: 40px; font-size: 13px;">중복확인</button></td>
-						</tr>
-						<tr>
-							<td align="right">비밀번호 :&nbsp;</td>
-							<td><input type="password" name="password"/></td>
-						</tr>
-						<tr>
-							<td align="right">이메일 :&nbsp;</td>
-							<td><input type="email" name="email"/></td>
-						</tr>
-	
-					</table>
-					<hr>
-					<div align="center">
-						<input class="btn btn-info btn-lg" data-toggle="modal" type="submit" value="회원가입" />
-					</div>
-				</form>
-			</div>
+			<h3>회원가입 성공</h3>
 		</section>
 		
 		<footer data-role="footer">
