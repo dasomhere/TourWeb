@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -60,10 +61,17 @@ public class LoginController {
 		log.info("######################");
 		
 		JdbcTemplate template = new JdbcTemplate(ds);
-		String sql = "select id,pwd from member where id=? and pwd=?";
-		User u = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), id, password);
 		
-		return "login/loginsuccess";
+		
+		try{
+			String sql = "select id,password from member where id=? and password=?";
+			User u = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), id, password);
+			return "login/loginsuccess";
+		} catch(DataAccessException e){
+			return "login/loginform";
+		}
+		
+		
 	}
 	
 	@RequestMapping(value="/logout", method=RequestMethod.POST)
