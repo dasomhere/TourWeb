@@ -35,7 +35,7 @@ public class LoginController {
 		 
 		if("webapp".equals(user.getId()) && "1234".equals(user.getPassword())) {
 	         session.setAttribute("user", user);
-	         return "login/success";
+	         return "login/loginsuccess";
 	         // Login Success
 	      } else {
 	         return "redirect:login";

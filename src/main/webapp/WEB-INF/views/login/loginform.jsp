@@ -26,7 +26,7 @@
 	});
 </script>
 
-<title>joinform.jsp</title>
+<title>loginform.jsp</title>
 
 </head>
 
@@ -42,7 +42,7 @@
 
 		<section data-role="content" class="container">
 			<div>
-				<form action="/login" method="post">
+				<form action="login" method="post">
 					<table>
 						<tr>
 							<td align="right">&nbsp; &nbsp; &nbsp;아이디 &nbsp; &nbsp;</td>
@@ -55,7 +55,7 @@
 					</table>
 					<br>
 					<div align="center">
-						<button type="button">로그인</button>
+						<button type="submit">로그인</button>
 					</div>
 					<hr>
 					<div align="center">
