@@ -55,7 +55,7 @@
 					</table>
 					<br>
 					<div align="center">
-						<button type="submit">로그인</button>
+						<button type="submit" >로그인</button>
 					</div>
 					<hr>
 					<div align="center">
