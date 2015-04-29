@@ -31,7 +31,7 @@
 </head>
 
 <body data-ng-controller="mainController">
-	<div data-role="page">
+	<div data-role="page" >
 		<header data-role="header"  data-position="fixed" >
 		 	<div data-role="header" style="height: 50px">
     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a>
