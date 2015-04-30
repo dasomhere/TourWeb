@@ -18,10 +18,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.webapp.model.LoginResult;
 import com.webapp.model.User;
 
 @Controller
-@RequestMapping("/tour")
+@RequestMapping("/login")
 public class LoginController {
 		static Log log = LogFactory.getLog(TourController.class);
 
@@ -58,21 +59,27 @@ public class LoginController {
 //		}
 		
 //	}
-	@RequestMapping(value="/login", method=RequestMethod.GET, headers="Accept=application/json")
+	@RequestMapping(value="login", method=RequestMethod.POST, headers="Accept=application/json")
 	@ResponseBody
-	public User login(User user, String id, String password){
+//	public LoginResult login(User user, String id, String password){
+	public String login(User user, String id, String password){
 		log.info("###########################");
 		log.info("#############emp###########");
 		log.info("###########################");
 		
-		JdbcTemplate template = new JdbcTemplate(ds);
-		try{
-			String sql = "select id,password from member where id=? and password=?";
-			User u = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), id, password);
-			return u;
-		} catch(EmptyResultDataAccessException e){
-			return user;
-		}
+//		JdbcTemplate template = new JdbcTemplate(ds);
+//		User u = null;
+//		try{
+//			String sql = "select id,password from member where id=? and password=?";
+//			u = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), id, password);
+//			return u;
+//		} catch(EmptyResultDataAccessException e){
+//			return u;
+//		}
+		LoginResult result = new LoginResult();
+		result.setLogin(true);
+		result.setMessage("로그인 성공");
+		return "{login : true, message : '로그인 성공 ㅋㅋㅋ'}";
 	}
 	@RequestMapping(value="/logout", method=RequestMethod.POST)
 	public String logout(HttpSession session){

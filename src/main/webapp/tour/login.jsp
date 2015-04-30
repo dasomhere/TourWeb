@@ -5,7 +5,7 @@
 <section class="container">
 	<hr>
 	<div>
-		<form action="login" method="post" onsubmit='return checkForm()'>
+		<form ng-submit="login()">
 			<div align="center">
 			<table>
 				<tr>
