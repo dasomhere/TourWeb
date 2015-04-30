@@ -24,7 +24,7 @@
 <link rel="stylesheet" type="text/css" href="${cssjquerymobile}" />
 <link rel="stylesheet" type="text/css" href="${bootstrapcss}" />
 <script type="text/javascript" src="${jquery}"></script>
-<script type="text/javascript" src="${jquerymobile}"></script>
+<%-- <script type="text/javascript" src="${jquerymobile}"></script> --%>
 <script type="text/javascript" src="${angular}"></script>
 <script type="text/javascript" src="${bootstrapmin}"></script>
 <%-- <script type="text/javascript" src="${cordova}"></script> --%>
