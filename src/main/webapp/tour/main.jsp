@@ -45,85 +45,13 @@
         margin-left: -80px;
     }
 </style>
-
-<script type="text/javascript">
-
-	var myApp = angular.module('myApp', ["ngSanitize", "ngAnimate", "ngRoute"]);
-	
-	myApp.config(function($routeProvider) {
-
-		var event = {
-				templateUrl : "event.jsp",
-				controller : "eventController"
-		};
-		var local = {
-				templateUrl : "local.jsp",
-				controller : "localController"
-		};
-		var weather = {
-				templateUrl : "weather.jsp",
-				controller : "weatherController"
-		};
-		var load = {
-				templateUrl : "load.jsp",
-				controller : "loadController"
-		};
-		var login = {
-				templateUrl : "login.jsp",
-				controller : "loginController"
-		};
-		var join = {
-				templateUrl : "join.jsp",
-				controller : "joinController"
-		};
-		
-		$routeProvider.when('/event', event);
-		$routeProvider.when('/local', local);
-		$routeProvider.when('/weather', weather);
-		$routeProvider.when('/load', load);
-		$routeProvider.when('/login', login);
-		$routeProvider.when('/join', join);
-		$routeProvider.otherwise({redirectTo:'/event'});
-		
-		});
-		myApp.controller('mainController', function($scope) {
-			alert("mainController");
-		});
-		myApp.controller('eventController', function($scope) {
-			alert("eventController");
-		});
-		myApp.controller('localController', function($scope) {
-			alert("localController");
-		});
-		myApp.controller('weatherController', function($scope) {
-			alert("weatherController");
-		});
-		myApp.controller('loadController', function($scope) {
-			alert("loadController");
-		});
-		myApp.controller('loginController', function($scope) {
-			alert("loginController");
-		});
-		myApp.controller('joinController', function($scope) {
-			alert("joinController");
-		});
-	
-	
-// 	myApp.controller('mainController', function($scope) {
-// 		$scope.title = "Main Controller";
-// 	});	
-	
-// 	$(function () {
-// 		   $('#modal').modal(toggle)
-// 	});
-// 	$('yourmodalselector').on('hide',function(e){
-// 		   if(yourConditionNotToCloseMet){
-// 		      e.preventDefault();
-// 		   }
-// 		   $(".btn-warning").click();
-// 	});
-
-</script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="event.js"></script>
+<script type="text/javascript" src="join.js"></script>
+<script type="text/javascript" src="load.js"></script>
+<script type="text/javascript" src="local.js"></script>
+<script type="text/javascript" src="login.js"></script>
+<script type="text/javascript" src="weather.js"></script>
 
 <title>form.jsp</title>
 </head>

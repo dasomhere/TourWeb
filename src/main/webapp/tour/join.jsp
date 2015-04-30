@@ -25,7 +25,7 @@
 				<tr>
 					<td align="right">비밀번호 :&nbsp;</td>
 					<td><input type="password" name="password" id="password" data-ng-model="password" data-ng-required="true" 
-									ng-pattern="/^.{4,12}$/"/></td>
+									data-ng-pattern="/^.{4,12}$/"/></td>
 					<td style="padding-left: 10px">
 						<span style="color: red" data-ng-if="loginForm.password.$error.required">
 						4자이상, 12자이하
