@@ -48,7 +48,7 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#" class="ui-btn-active">행사</a></li>
-					<li><a href="http://localhost:8080/TourWeb/m/tour/local" >지역</a></li>
+					<li><a href="localform.jsp" >지역</a></li>
 					<li><a href="http://localhost:8080/TourWeb/m/tour/weather" >날씨</a></li>
 					<li><a href="http://localhost:8080/TourWeb/m/tour/load" >길찾기</a></li>
 				</ul>

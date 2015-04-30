@@ -19,7 +19,43 @@
 	var myApp = angular.module('myApp', []);
 	myApp.controller('mainController', function($scope) {
 		$scope.title = "Main Controller";
+		
+		
+		
 	});
+	
+	function checkForm() {
+		var idcheck = true;
+	    var id=$("#id").val();//입력된 아이디
+	    var password=$("#password").val();
+	    $.ajax({
+		    url:"/TourWeb/ajax/login.jsp",
+		    data: {id:id, password:password},//서버로 전송될 파라미터
+		    type:"post", //post 방식으로 요청합니다.
+		    dataType:"xml",//응답콘텐츠 타입
+		    async: false,
+		    success:function(data){//응답이 성공하면 function 수행
+		    //응답데이터에서 result 태그의 텍스트값 얻어오기
+			    var using=$(data).find("result").text();
+			    if(using=='false'){
+					if(id == '') {
+						$("#idcheck").html("<font color='red'>아이디를 입력하세요.</font>");
+						idcheck=false;
+					} else if(password == '') {
+						$("#idcheck").html("<font color='red'>비밀번호를 입력하세요.</font>");
+						idcheck=false;
+					} else {
+				    	$("#idcheck").html("<font color='red'>아이디/비밀번호가 올바르지 않습니다.</font>");
+						idcheck=false;
+					}
+				}
+			}
+	    });
+
+		if(!idcheck) {
+		    return idcheck;
+	    }
+	}
 
 	$(function() {
 		$('#modal').modal(toggle)
@@ -42,20 +78,21 @@
 
 		<section data-role="content" class="container">
 			<div>
-				<form action="login" method="post">
+				<form action="login" method="post" onsubmit='return checkForm()'>
 					<table>
 						<tr>
 							<td align="right">&nbsp; &nbsp; &nbsp;아이디 &nbsp; &nbsp;</td>
-							<td><input type="text" name="id" /></td>
+							<td><input type="text" name="id" id="id"/></td>
 						</tr>
 						<tr>
 							<td align="right">비밀번호 &nbsp;</td>
-							<td><input type="password" name="password" /></td>
+							<td><input type="password" name="password" id="password"/></td>
 						</tr>
+						<tr><td></td><td><span id="idcheck" class="idchecklabel"></span></td></tr>
 					</table>
 					<br>
 					<div align="center">
-						<button type="submit" >로그인</button>
+						<button type="submit">로그인</button>
 					</div>
 					<hr>
 					<div align="center">
