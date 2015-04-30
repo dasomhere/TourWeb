@@ -31,6 +31,21 @@
 <script type="text/javascript" src="${angular}/angular-animate.min.js"></script>
 <script type="text/javascript" src="${angular}/angular-route.min.js"></script>
 
+<style type="text/css">
+  .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 160px;
+        text-align: center;
+        background-color: #eee;
+    }
+    .navbar>.container .navbar-brand-centered, 
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+    }
+</style>
+
 <script type="text/javascript">
 
 	var myApp = angular.module('myApp', ["ngSanitize", "ngAnimate", "ngRoute"]);
@@ -53,11 +68,21 @@
 				templateUrl : "load.jsp",
 				controller : "loadController"
 		};
+		var login = {
+				templateUrl : "login.jsp",
+				controller : "loginController"
+		};
+		var join = {
+				templateUrl : "join.jsp",
+				controller : "joinController"
+		};
 		
 		$routeProvider.when('/event', event);
 		$routeProvider.when('/local', local);
 		$routeProvider.when('/weather', weather);
 		$routeProvider.when('/load', load);
+		$routeProvider.when('/login', login);
+		$routeProvider.when('/join', join);
 		$routeProvider.otherwise({redirectTo:'/event'});
 		
 		});
@@ -75,6 +100,12 @@
 		});
 		myApp.controller('loadController', function($scope) {
 			alert("loadController");
+		});
+		myApp.controller('loginController', function($scope) {
+			alert("loginController");
+		});
+		myApp.controller('joinController', function($scope) {
+			alert("joinController");
 		});
 	
 	
@@ -98,13 +129,24 @@
 </head>
 	
 <body data-ng-controller="mainController">
+
 	<div class="container">
-		<a href="#event" class="btn btn-primary">행사</a>
-		<a href="#local" class="btn btn-primary">지역</a>
-		<a href="#weather" class="btn btn-primary">날씨</a>
-		<a href="#load" class="btn btn-primary">길찾기</a>
+		<div align="center"><a href="#event" class="">TourWeb</a>
+			<a href="#login" class="btn btn-default pull-right"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>
+		</div>
+		
+	
+<!-- 		<a class="navbar-brand" href="#event">TourWeb</a> -->
+<!-- 		<a href="#login" class="btn btn-default pull-right"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a> -->
+
+
+		<div class="navbar-mobile btn-group btn-group-justified">
+				<a href="#event" class="btn btn-default">event</a>
+				<a href="#local" class="btn btn-default">local</a>
+				<a href="#weather" class="btn btn-default">weather</a>
+				<a href="#load" class="btn btn-default">load</a>
+		</div>
 	</div>
-	<hr>
 	<ng-view>
 	</ng-view>
 
