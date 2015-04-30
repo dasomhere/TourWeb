@@ -1,4 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/taglib.jspf" %>
-<h1>form</h1>
+<h1>event</h1>

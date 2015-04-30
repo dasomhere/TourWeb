@@ -37,9 +37,9 @@
 	
 	myApp.config(function($routeProvider) {
 
-		var form = {
-				templateUrl : "form.jsp",
-				controller : "formController"
+		var event = {
+				templateUrl : "event.jsp",
+				controller : "eventController"
 		};
 		var local = {
 				templateUrl : "local.jsp",
@@ -54,18 +54,18 @@
 				controller : "loadController"
 		};
 		
-		$routeProvider.when('/form', form);
+		$routeProvider.when('/event', event);
 		$routeProvider.when('/local', local);
 		$routeProvider.when('/weather', weather);
 		$routeProvider.when('/load', load);
-		$routeProvider.otherwise({redirectTo:'/form'});
+		$routeProvider.otherwise({redirectTo:'/event'});
 		
 		});
 		myApp.controller('mainController', function($scope) {
 			alert("mainController");
 		});
-		myApp.controller('formController', function($scope) {
-			alert("formController");
+		myApp.controller('eventController', function($scope) {
+			alert("eventController");
 		});
 		myApp.controller('localController', function($scope) {
 			alert("localController");
@@ -99,7 +99,7 @@
 	
 <body data-ng-controller="mainController">
 	<div class="container">
-		<a href="#form" class="btn btn-primary">행사</a>
+		<a href="#event" class="btn btn-primary">행사</a>
 		<a href="#local" class="btn btn-primary">지역</a>
 		<a href="#weather" class="btn btn-primary">날씨</a>
 		<a href="#load" class="btn btn-primary">길찾기</a>
