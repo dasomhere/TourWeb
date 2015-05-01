@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -26,13 +27,13 @@ import com.webapp.model.LocalApi;
 public class LocalController {
 		static Log log = LogFactory.getLog(TourController.class);
 	
-	@RequestMapping(value="local", method=RequestMethod.GET)
+	@RequestMapping(value="local", method=RequestMethod.GET, headers="Accept=application/json")
 	@ResponseBody
 	public List<LocalApi> local() throws IOException, ParseException{
 		log.info("###############");
-		log.info("asdfdsf");
+		log.info("local");
 		log.info("###############");
-		List<LocalApi> list = null;
+		List<LocalApi> list = new ArrayList<LocalApi>();
 		
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode?numOfRows=10&pageNo=1&MobileOS=AND&MobileApp=myxxx&_type=json&ServiceKey=";
 		String key = "sA7tgy37XyQzBU2fPZpZw%2BGKNlR0BPdgP2RhAvNrw4ls2so%2F%2BgeLDAT8AHJO6CacIlHvKIfubhwPjiDXpy%2B7%2Fw%3D%3D";
@@ -54,10 +55,10 @@ public class LocalController {
 		
 		Iterator<JSONObject> iterator = item.iterator();
 		while (iterator.hasNext()) {
-			String name = (String) iterator.next().get("name");
-			System.out.println(name);
+//			List<LocalApi> name = (LocalApi) iterator.next().get("name");
+			log.info(iterator.next().get("name"));
 		}
-		
+		log.info(list);
 		
 		return list;
 	}
