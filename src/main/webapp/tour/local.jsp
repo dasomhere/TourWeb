@@ -4,11 +4,12 @@
 
 <section class="container">
 	<h1>local</h1>
-	<input type="button" data-ng-click="click()" value="클릭"/>
+	<input type="button" data-ng-click="click()" value="클릭" />
 	<div>
-		<textarea rows="10" cols="50" id="output"></textarea>
-		<ul>
-			<li data-ng-repeat="l in local">{{l.name}}</li>
+		<ul data-role="listview" >
+			<li data-ng-repeat="local in locals">
+				{{local}}
+			</li>
 		</ul>
 	</div>
 </section>
