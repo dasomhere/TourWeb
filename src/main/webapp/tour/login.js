@@ -11,13 +11,14 @@ myApp.controller('loginController', function($scope) {
 				id : $('#id').val(),
 				password : $('#password').val()
 			},
+			contentType: "application/json", 
 			success : function(result, status, error) {
 //				alert(status +" : "+JSON.stringify(result));
 //				if(result.login == true){
 //					alert("message = " + result.message);
 //				}else
 //					alert("emp 추가 실패...");
-				alert("xxx = " + result);
+				alert(JSON.stringify(result) + " : " + status);
 			},
 				
 			error : function(xhr, status, error) {
