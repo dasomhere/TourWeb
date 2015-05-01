@@ -20,41 +20,12 @@ public class MyUserDao implements UserDao {
 	
 	static Log log = LogFactory.getLog(MyUserDao.class);
 
-	DataSource dataSource;
-	
-	@Override
-	public void setDataSource(DataSource ds) {
-		
-		dataSource = ds;
-	}
 
 	@Override
 	public User selectByUserid(String id, String pwd) {
 		
-		Connection con = DataSourceUtils.getConnection(dataSource);
 		
-		User user=null;
-		try {
-			PreparedStatement pstmt = con.prepareStatement(SELECT_BY_USERID);
-			pstmt.setString(1, id);
-			
-			ResultSet rs = pstmt.executeQuery();
-			
-			if (rs.next()) {
-				user = new User();
-				user.setId(rs.getString("id"));
-				user.setPassword(rs.getString("password"));
-			}
-			
-		} catch (SQLException e) {
-			throw new DataRetrievalFailureException("fail", e);
-		}
-		
-		if (user == null)
-			throw new EmptyResultDataAccessException("dept empty row", 1);
-		
-		
-		return user;
+		return null;
 	}
 	
 	
