@@ -4,7 +4,7 @@
 <hr>
 <section class="container">
 <div>
-	<form ng-submit="login()" onsubmit='return checkForm()'>
+	<form data-ng-submit="login()">
 		<div align="center">
 		<table>
 			<tr>
@@ -15,7 +15,7 @@
 				<td align="right">비밀번호 &nbsp;</td>
 				<td><input type="password" name="password" id="password"/></td>
 			</tr>
-			<tr><td></td><td><span id="idcheck" class="idchecklabel"></span></td></tr>
+			<tr><td colspan="2" align="center" style="color: red"><span id="idcheck"></span></td></tr>
 		</table>
 		</div>
 		<br>

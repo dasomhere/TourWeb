@@ -1,20 +1,27 @@
 package com.webapp.model;
 
 public class LoginResult {
-	Boolean login;
-	String message;
+	Boolean status = false;
+	Boolean loginStatus = false;
+	User user;
 	
-	public Boolean getLogin() {
-		return login;
+	public Boolean getStatus() {
+		return status;
 	}
-	public void setLogin(Boolean login) {
-		this.login = login;
+	public void setStatus(Boolean status) {
+		this.status = status;
 	}
-	public String getMessage() {
-		return message;
+	public Boolean getLoginStatus() {
+		return loginStatus;
 	}
-	public void setMessage(String message) {
-		this.message = message;
+	public void setLoginStatus(Boolean loginStatus) {
+		this.loginStatus = loginStatus;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 }
