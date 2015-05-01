@@ -5,14 +5,15 @@ myApp.controller('loginController', function($scope) {
 		
 		$.ajax({
 			type : "POST",
-			url  : "emp",
+			url  : "/TourWeb/m/login/login",
 			dataType : "json",
-//			contentType: "application/charset=utf-8",
 			data : {	
 				id : $('#id').val(),
-				name : $('#post #ename').val()
+				name : $('#password').val()
 			},
-			success : function(result, status) {
+			contentType: "application/json", 
+			success : function(result, status, error) {
+				alert(JSON.stringify(result) + " : " + status);
 				alert(status +" : "+JSON.stringify(result));
 				if(result.status == true){
 				alert("emp 추가 성공....");
