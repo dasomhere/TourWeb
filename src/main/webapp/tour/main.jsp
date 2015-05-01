@@ -53,17 +53,15 @@
 <script type="text/javascript" src="login.js"></script>
 <script type="text/javascript" src="weather.js"></script>
 
-<title>form.jsp</title>
+<title>main.jsp</title>
 </head>
 	
 <body data-ng-controller="mainController">
-
 	<div class="container">
-		<div align="center"><a href="#event" class="">TourWeb</a>
+		<div align="center"><a href="#event">TourWeb</a>
 			<a href="#login" class="btn btn-default pull-right"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>
 		</div>
 		
-	
 <!-- 		<a class="navbar-brand" href="#event">TourWeb</a> -->
 <!-- 		<a href="#login" class="btn btn-default pull-right"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a> -->
 
