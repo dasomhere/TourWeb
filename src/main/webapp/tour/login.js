@@ -5,23 +5,22 @@ myApp.controller('loginController', function($scope) {
 		
 		$.ajax({
 			type : "POST",
-			url  : "/TourWeb/m/login/login",
-			dataType : 'json',
+			url  : "emp",
+			dataType : "json",
+//			contentType: "application/charset=utf-8",
 			data : {	
 				id : $('#id').val(),
-				password : $('#password').val()
+				name : $('#post #ename').val()
 			},
-			success : function(result, status, error) {
-//				alert(status +" : "+JSON.stringify(result));
-//				if(result.login == true){
-//					alert("message = " + result.message);
-//				}else
-//					alert("emp 추가 실패...");
-				alert("xxx = " + result);
+			success : function(result, status) {
+				alert(status +" : "+JSON.stringify(result));
+				if(result.status == true){
+				alert("emp 추가 성공....");
+			}else
+				alert("emp 추가 실패...")
 			},
-				
-			error : function(xhr, status, error) {
-				alert(status + " " + error +" " +this.url);
+			error : function(xhr, status) {
+				alert(status);
 			}
 		});
 	}
