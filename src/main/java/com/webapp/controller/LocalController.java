@@ -16,7 +16,7 @@ import com.webapp.model.LocalApi;
 public class LocalController {
 		static Log log = LogFactory.getLog(TourController.class);
 	
-	@RequestMapping(value="/local", method=RequestMethod.GET)
+	@RequestMapping(value="local", method=RequestMethod.GET)
 	@ResponseBody
 	public List<LocalApi> tour(){
 		log.info("###############");
