@@ -26,7 +26,7 @@ public class LoginController {
 	DataSource ds;
 	
 	@ResponseBody
-	@RequestMapping(value="login", method=RequestMethod.POST)
+	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public LoginResult login(@RequestBody User user, HttpSession session) {
 		log.info("###########################");
 		log.info("### login POST...");
