@@ -5,11 +5,12 @@ myApp.controller('loginController', function($scope) {
 		
 		$.ajax({
 			type : "POST",
-			url  : "/TourWeb/m/login/login",
-			dataType : 'json',
+			url  : "emp",
+			dataType : "json",
+//			contentType: "application/charset=utf-8",
 			data : {	
 				id : $('#id').val(),
-				password : $('#password').val()
+				name : $('#post #ename').val()
 			},
 			contentType: "application/json", 
 			success : function(result, status, error) {
@@ -19,10 +20,14 @@ myApp.controller('loginController', function($scope) {
 //				}else
 //					alert("emp 추가 실패...");
 				alert(JSON.stringify(result) + " : " + status);
+				alert(status +" : "+JSON.stringify(result));
+				if(result.status == true){
+				alert("emp 추가 성공....");
+			}else
+				alert("emp 추가 실패...")
 			},
-				
-			error : function(xhr, status, error) {
-				alert(status + " " + error +" " +this.url);
+			error : function(xhr, status) {
+				alert(status);
 			}
 		});
 	}
