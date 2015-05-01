@@ -59,13 +59,14 @@
 <body data-ng-controller="mainController">
 	<div class="container">
 		<div align="center"><a href="#event">TourWeb</a>
-			<a href="#login" class="btn btn-default pull-right"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>
+			<a href="#login" class="btn btn-default pull-right" data-ng-if="loginResult.loginStatus==null || loginResult.loginStatus==false">
+				<span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a>
+			<div class="pull-right" data-ng-if="loginResult.loginStatus==true">id : {{loginResult.user.id}}&nbsp;
+				<a data-ng-click="logout()" class="btn btn-default" data-ng-if="loginResult.loginStatus==true">
+					<span class="glyphicon glyphicon-log-in"></span>&nbsp;Logout</a>
+			</div>
 		</div>
 		
-<!-- 		<a class="navbar-brand" href="#event">TourWeb</a> -->
-<!-- 		<a href="#login" class="btn btn-default pull-right"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a> -->
-
-
 		<div class="navbar-mobile btn-group btn-group-justified">
 				<a href="#event" class="btn btn-default">event</a>
 				<a href="#local" class="btn btn-default">local</a>
@@ -75,37 +76,6 @@
 	</div>
 	<ng-view>
 	</ng-view>
-
-
-
-<!-- 	<div data-role="page"> -->
-<!-- 		<header data-role="header"  data-position="fixed" > -->
-<!-- 		 	<div data-role="header" style="height: 50px"> -->
-<!--     			<a href="http://localhost:8080/TourWeb/m/tour/form" >Home</a> -->
-<!-- 				<h1>떠 나 yo!</h1> -->
-<!-- 				<a href="http://localhost:8080/TourWeb/m/tour/login" data-rel="dialog" data-transition="slidedown" >로그인</a> -->
-	
-	   			
-<!--   			</div> -->
-<!-- 			<div data-role="navbar"> -->
-<!-- 				<ul> -->
-<!-- 					<li><a href="#" class="ui-btn-active">행사</a></li> -->
-<!-- 					<li><a href="localform.jsp" >지역</a></li> -->
-<!-- 					<li><a href="http://localhost:8080/TourWeb/m/tour/weather" >날씨</a></li> -->
-<!-- 					<li><a href="http://localhost:8080/TourWeb/m/tour/load" >길찾기</a></li> -->
-<!-- 				</ul> -->
-<!-- 			</div> -->
-<!-- 		</header> -->
-				
-<!-- 		<section data-role="content" class="container"> -->
-<!-- 			<h1>event</h1> -->
-<!-- 		</section> -->
-<!-- 		<footer data-role="footer"> -->
-<!-- 			<h1>Footer</h1> -->
-<!-- 		</footer> -->
-<!-- 	</div> -->
-	
-	
 		
 </body>
 </html>
