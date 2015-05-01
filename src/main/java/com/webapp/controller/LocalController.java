@@ -26,7 +26,7 @@ import org.json.simple.parser.ParseException;
 public class LocalController {
 		static Log log = LogFactory.getLog(TourController.class);
 	
-	@RequestMapping(value="local", method=RequestMethod.POST, headers="Accept=application/json")
+	@RequestMapping(value="local", method=RequestMethod.GET, headers="Accept=application/json")
 	@ResponseBody
 	public List<String> local() throws IOException, ParseException{
 		log.info("###############");

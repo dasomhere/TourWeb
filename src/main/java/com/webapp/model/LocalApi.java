@@ -10,7 +10,6 @@ public class LocalApi {
 	public List<Local> getName() {
 		return name;
 	}
-
 	public void setName(List<Local> name) {
 		this.name = name;
 	}
