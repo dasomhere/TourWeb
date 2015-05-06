@@ -5,8 +5,10 @@
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
 	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
@@ -15,31 +17,28 @@
 	  p:url="jdbc:oracle:thin:@localhost:1521:xe"
 	  p:username="scott"
 	  p:password="tiger"/>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:/com/webapp/dao/xml/UserDao.xml</value>
+			</list>
+		</property>
+	</bean>
 
-<!-- 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> -->
-<!--   	<property name="dataSource" ref="dataSource" /> -->
-<!-- 	</bean> -->
-<!-- 		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> -->
+	<bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+		<property name="mapperInterface" value="com.webapp.dao.UserDao" />
+	</bean>
+
+<!-- 	<bean id="userDao" class="com.webapp.dao.impl.MyUserDao"> -->
 <!-- 		<property name="dataSource" ref="dataSource" /> -->
-<!-- 		<property name="mapperLocations"> -->
-<!-- 			<list> -->
-<!-- 				<value>classpath:/com/webapp/dao/xml/UserDao.xml</value> -->
-<!-- 			</list> -->
-<!-- 		</property> -->
 <!-- 	</bean> -->
 
-<!-- 	<bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean"> -->
-<!-- 		<property name="sqlSessionFactory" ref="sqlSessionFactory" /> -->
-<!-- 		<property name="mapperInterface" value="com.webapp.dao.UserDao" /> -->
-<!-- 	</bean> -->
-
-	<!-- <bean id="userDao" class="com.webapp.dao.impl.MyUserDao"> -->
-	<!-- <property name="dataSource" ref="dataSource" /> -->
-	<!-- </bean> -->
-
-<!-- 	<bean id="deptInfoService" class="com.webapp.service.UserInfoService"> -->
-<!-- 		<property name="dataSource" ref="dataSource" /> -->
-<!-- 		<property name="userDao" ref="userDao" /> -->
-<!-- 	</bean> -->
+	<bean id="deptInfoService" class="com.webapp.service.UserInfoService">
+		<property name="dataSource" ref="dataSource" />
+		<property name="userDao" ref="userDao" />
+	</bean>
 
 </beans>

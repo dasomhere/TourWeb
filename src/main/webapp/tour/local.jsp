@@ -7,7 +7,7 @@
 	
 	<div>
 		<ul class="list-group">
-			<li class="list-group-item" data-ng-repeat="local in locals" data-ng-click="click()" id="local">
+			<li class="list-group-item" data-ng-repeat="local in locals" data-ng-click="click(local)" id="local">
 				{{local}}
 			</li>
 		</ul>

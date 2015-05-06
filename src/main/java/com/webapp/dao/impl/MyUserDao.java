@@ -23,10 +23,20 @@ public class MyUserDao implements UserDao {
 
 	@Override
 	public User selectByUserid(String id, String pwd) {
+		User user = null;
+		
+		user = new User();
 		
 		
-		return null;
+		return user;
 	}
+	@Override
+	public void setDataSource(DataSource ds) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 	
 	
 	

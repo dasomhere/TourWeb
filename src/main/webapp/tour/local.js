@@ -1,18 +1,18 @@
 
-myApp.controller('localController', function($scope) {
+myApp.controller('localController', function($scope, $http) {
 	alert("localController");
-			$.ajax({
-				type : "GET",
-				url  : "/TourWeb/m/local/city?_" + new Date().getTime(),
-				dataType : "json",
-				success : function(locals) {
-					$scope.locals = locals;
-					var msg = local;
-					alert($scope.locals);
-				},	
-				error : function(xhr, status, error) {
-						alert(status + " : "+ this.url);
-				}
+	
+	$http.get("/TourWeb/m/local/seoulNature").success(function(city) {
+			$scope.locals = city;
+			alert(city);
+	});
+	$scope.click = function(locals) {
+		if(locals=="서울"){
+			alert("서울");
+			$http.get("/TourWeb/m/local/seoul").success(function(seoul) {
+				$scope.locals = seoul;
 			});
+		}
+	};
 });
 
