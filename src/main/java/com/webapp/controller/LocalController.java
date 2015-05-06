@@ -99,7 +99,7 @@ public class LocalController {
 		return list;
 	}
 	
-	@RequestMapping(value="seoulNature", method=RequestMethod.GET, headers="Accept=application/json")
+	@RequestMapping(value="Nature", method=RequestMethod.GET, headers="Accept=application/json")
 	@ResponseBody
 	public List<String> seoulNature() throws IOException, ParseException{
 		log.info("###############");
@@ -113,7 +113,6 @@ public class LocalController {
 		URL get = new URL(url+key);
 		InputStream in = get.openStream();
 
-		JSONObject obj = new JSONObject();
 		JSONParser parser = new JSONParser();
 		JSONObject jsonObject = (JSONObject) parser.parse(new InputStreamReader(in));
 		JSONObject response = (JSONObject) jsonObject.get("response");
